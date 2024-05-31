@@ -1,0 +1,161 @@
+/* styles.css */
+
+/* Reset some basic elements for better cross-browser compatibility */
+body, h1, h2, h3, div, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light cyan background color */
+    height: 100vh;
+}
+
+/* Style the heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #00796b; /* Dark teal color */
+}
+
+/* Style the turn container */
+.turn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.turn-container h3 {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #00796b; /* Dark teal color */
+}
+
+.turn-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #00796b; /* Dark teal color */
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.turn-box:hover {
+    background-color: #ff5722; /* Vivid orange hover color */
+    transform: translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlight the active turn */
+.turn-box.active {
+    background-color: #ff5722; /* Vivid orange color */
+}
+
+.bg {
+    display: none;
+}
+
+/* Style the main grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #333;
+    background-color: #ffffff;
+    border: 2px solid #00796b; /* Dark teal border color */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    background-color: #b2ebf2; /* Light teal hover color */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the result text */
+#results {
+    font-size: 1.5em;
+    color: #00796b; /* Dark teal color */
+    margin-bottom: 20px;
+}
+
+/* Style the play again button */
+#play-again {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #00796b; /* Dark teal color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#play-again:hover {
+    background-color: #ff5722; /* Vivid orange hover color */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .turn-container h3 {
+        font-size: 1.2em;
+    }
+
+    .turn-box {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+
+    #results {
+        font-size: 1.2em;
+    }
+
+    #play-again {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
